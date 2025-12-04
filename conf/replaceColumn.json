@@ -1,0 +1,12 @@
+{
+  "sheets": {
+    "items": {
+      "columns": {
+        "description": {
+          "from": "\n",
+          "to": "<br>"
+        }
+      }
+    }
+  }
+}

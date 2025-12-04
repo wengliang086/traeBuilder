@@ -1,0 +1,54 @@
+{
+  "sourceDir": "./data",
+  "outputDir": "./output",
+  "formats": ["json", "php", "fbs"],
+  "async": false,
+  "fastMode": false,
+  "syncToGame": false,
+  "gameDir": "./game",
+  "readers": {
+    "default": {
+      "type": "excel",
+      "enabled": true,
+      "options": {
+        "sheetName": "",
+        "headerRow": 1
+      }
+    }
+  },
+  "converters": {
+    "json": {
+      "type": "json",
+      "enabled": true,
+      "outputPath": "json",
+      "options": {
+        "indent": true
+      }
+    },
+    "php": {
+      "type": "php",
+      "enabled": true,
+      "outputPath": "php",
+      "options": {
+        "arrayName": "data"
+      }
+    },
+    "fbs": {
+      "type": "fbs",
+      "enabled": true,
+      "outputPath": "fbs",
+      "options": {
+        "schemaPath": "./schema"
+      }
+    }
+  },
+  "validators": {
+    "default": {
+      "type": "default",
+      "enabled": true,
+      "options": {
+        "checkReferences": true
+      }
+    }
+  }
+}
