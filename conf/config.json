@@ -1,18 +1,17 @@
 {
-  "sourceDir": "./data",
+  "sourceDir": "./examples",
   "outputDir": "./output",
   "formats": ["json", "php", "fbs"],
   "async": false,
   "fastMode": false,
   "syncToGame": false,
-  "gameDir": "./game",
+  "gameDir": "",
   "readers": {
     "default": {
-      "type": "excel",
+      "type": "default",
       "enabled": true,
       "options": {
-        "sheetName": "",
-        "headerRow": 1
+        "skipEmptyRows": true
       }
     }
   },
@@ -29,17 +28,13 @@
       "type": "php",
       "enabled": true,
       "outputPath": "php",
-      "options": {
-        "arrayName": "data"
-      }
+      "options": {}
     },
     "fbs": {
       "type": "fbs",
       "enabled": true,
       "outputPath": "fbs",
-      "options": {
-        "schemaPath": "./schema"
-      }
+      "options": {}
     }
   },
   "validators": {
@@ -47,7 +42,7 @@
       "type": "default",
       "enabled": true,
       "options": {
-        "checkReferences": true
+        "strict": true
       }
     }
   }

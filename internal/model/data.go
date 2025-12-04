@@ -2,10 +2,10 @@ package model
 
 // DataSheet 表示一个数据表
 type DataSheet struct {
-	Name     string            // 表名
-	Columns  []ColumnInfo      // 列信息
-	Rows     []map[string]interface{} // 行数据
-	Meta     map[string]interface{}   // 元数据
+	Name    string                   // 表名
+	Columns []ColumnInfo             // 列信息
+	Rows    []map[string]interface{} // 行数据
+	Meta    map[string]interface{}   // 元数据
 }
 
 // ColumnInfo 表示列信息
@@ -21,7 +21,7 @@ type ColumnInfo struct {
 
 // RefInfo 表示引用关系
 type RefInfo struct {
-	Sheet string // 引用的表名
+	Sheet  string // 引用的表名
 	Column string // 引用的列名
 }
 

@@ -140,12 +140,12 @@ func (v *DefaultValidator) ValidateRef(sheets []*model.DataSheet) []*model.Error
 				for rowIndex, row := range sheet.Rows {
 					if val, exists := row[col.Name]; exists && val != nil {
 						if !refIndex[col.Ref.Sheet][val] {
-						errors = append(errors, &model.ErrorInfo{
-							Sheet:  sheet.Name,
-							Row:    rowIndex + 4,
-							Column: col.Name,
-							Msg:    fmt.Sprintf("引用值 %v 在表 %s 中不存在", val, col.Ref.Sheet),
-						})
+							errors = append(errors, &model.ErrorInfo{
+								Sheet:  sheet.Name,
+								Row:    rowIndex + 4,
+								Column: col.Name,
+								Msg:    fmt.Sprintf("引用值 %v 在表 %s 中不存在", val, col.Ref.Sheet),
+							})
 						}
 					}
 				}

@@ -102,8 +102,8 @@ func (r *ExcelReader) readSheet(f *excelize.File, sheetName string) (*model.Data
 		}
 
 		colInfo := model.ColumnInfo{
-			Name:    name,
-			Comment: commentRow[i],
+			Name:     name,
+			Comment:  commentRow[i],
 			Required: true,
 		}
 

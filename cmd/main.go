@@ -18,19 +18,19 @@ import (
 
 // Builder 数据构建器
 type Builder struct {
-	configManager  *config.ConfigManager
-	readerFactory  *reader.ReaderFactory
+	configManager    *config.ConfigManager
+	readerFactory    *reader.ReaderFactory
 	converterFactory *converter.ConverterFactory
-	validator      *validator.DefaultValidator
+	validator        *validator.DefaultValidator
 }
 
 // NewBuilder 创建数据构建器
 func NewBuilder() *Builder {
 	return &Builder{
-		configManager:  config.NewConfigManager(),
-		readerFactory:  reader.NewReaderFactory(),
+		configManager:    config.NewConfigManager(),
+		readerFactory:    reader.NewReaderFactory(),
 		converterFactory: converter.NewConverterFactory(),
-		validator:      validator.NewDefaultValidator(),
+		validator:        validator.NewDefaultValidator(),
 	}
 }
 
@@ -78,7 +78,7 @@ func (b *Builder) Build() error {
 	}
 
 	// 6. 打印构建信息
-	fmt.Printf("构建完成，耗时 %v，共处理 %d 个表，生成 %d 个文件\n", 
+	fmt.Printf("构建完成，耗时 %v，共处理 %d 个表，生成 %d 个文件\n",
 		time.Since(startTime), len(sheets), len(results))
 
 	return nil
@@ -474,7 +474,7 @@ func main() {
 		fmt.Println("Usage:")
 		fmt.Println("  builder [options]")
 		fmt.Println("Options:")
-		fmt.Printf("  -conf string   配置文件目录 (default \"%s\")\n", "./conf")
+		fmt.Println("  -conf string   配置文件目录 (default \"./conf\")")
 		fmt.Println("  -fast          快速模式，只处理修改过的文件")
 		fmt.Println("  -async         异步处理")
 		fmt.Println("  -help          显示帮助信息")
@@ -482,7 +482,7 @@ func main() {
 	}
 
 	// 创建构建器
-builder := NewBuilder()
+	builder := NewBuilder()
 
 	// 加载配置
 	if err := builder.LoadConfig(*confDir); err != nil {

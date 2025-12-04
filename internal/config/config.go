@@ -8,38 +8,38 @@ import (
 
 // Config 主配置结构
 type Config struct {
-	SourceDir     string            `json:"sourceDir"`      // 源文件目录
-	OutputDir     string            `json:"outputDir"`      // 输出目录
-	Formats       []string          `json:"formats"`        // 转换格式
-	Async         bool              `json:"async"`          // 是否异步处理
-	FastMode      bool              `json:"fastMode"`       // 快速模式
-	SyncToGame    bool              `json:"syncToGame"`     // 是否同步到游戏目录
-	GameDir       string            `json:"gameDir"`        // 游戏目录
-	Readers       map[string]ReaderConfig `json:"readers"`    // 读取器配置
-	Converters    map[string]ConverterConfig `json:"converters"` // 转换器配置
-	Validators    map[string]ValidatorConfig `json:"validators"` // 验证器配置
+	SourceDir  string                     `json:"sourceDir"`  // 源文件目录
+	OutputDir  string                     `json:"outputDir"`  // 输出目录
+	Formats    []string                   `json:"formats"`    // 转换格式
+	Async      bool                       `json:"async"`      // 是否异步处理
+	FastMode   bool                       `json:"fastMode"`   // 快速模式
+	SyncToGame bool                       `json:"syncToGame"` // 是否同步到游戏目录
+	GameDir    string                     `json:"gameDir"`    // 游戏目录
+	Readers    map[string]ReaderConfig    `json:"readers"`    // 读取器配置
+	Converters map[string]ConverterConfig `json:"converters"` // 转换器配置
+	Validators map[string]ValidatorConfig `json:"validators"` // 验证器配置
 }
 
 // ReaderConfig 读取器配置
 type ReaderConfig struct {
-	Type       string                 `json:"type"`         // 读取器类型
-	Enabled    bool                   `json:"enabled"`      // 是否启用
-	Options    map[string]interface{} `json:"options"`      // 选项
+	Type    string                 `json:"type"`    // 读取器类型
+	Enabled bool                   `json:"enabled"` // 是否启用
+	Options map[string]interface{} `json:"options"` // 选项
 }
 
 // ConverterConfig 转换器配置
 type ConverterConfig struct {
-	Type       string                 `json:"type"`         // 转换器类型
-	Enabled    bool                   `json:"enabled"`      // 是否启用
-	OutputPath string                 `json:"outputPath"`   // 输出路径
-	Options    map[string]interface{} `json:"options"`      // 选项
+	Type       string                 `json:"type"`       // 转换器类型
+	Enabled    bool                   `json:"enabled"`    // 是否启用
+	OutputPath string                 `json:"outputPath"` // 输出路径
+	Options    map[string]interface{} `json:"options"`    // 选项
 }
 
 // ValidatorConfig 验证器配置
 type ValidatorConfig struct {
-	Type       string                 `json:"type"`         // 验证器类型
-	Enabled    bool                   `json:"enabled"`      // 是否启用
-	Options    map[string]interface{} `json:"options"`      // 选项
+	Type    string                 `json:"type"`    // 验证器类型
+	Enabled bool                   `json:"enabled"` // 是否启用
+	Options map[string]interface{} `json:"options"` // 选项
 }
 
 // CombineConfig 合并配置
@@ -72,9 +72,9 @@ type ReplaceRule struct {
 
 // ConfigManager 配置管理器
 type ConfigManager struct {
-	Config          *Config
-	CombineConfig   *CombineConfig
-	ReplaceConfig   *ReplaceColumnConfig
+	Config        *Config
+	CombineConfig *CombineConfig
+	ReplaceConfig *ReplaceColumnConfig
 }
 
 // NewConfigManager 创建配置管理器

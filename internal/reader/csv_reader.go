@@ -70,8 +70,8 @@ func (r *CSVReader) ReadSheet(filePath string, sheetName string) (*model.DataShe
 		}
 
 		colInfo := model.ColumnInfo{
-			Name:    name,
-			Comment: commentRow[i],
+			Name:     name,
+			Comment:  commentRow[i],
 			Required: true,
 		}
 

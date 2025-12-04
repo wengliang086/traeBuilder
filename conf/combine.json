@@ -1,9 +1,4 @@
 {
   "sheets": {
-    "all_items": {
-      "sourceSheets": ["items", "weapons"],
-      "keyColumn": "id",
-      "outputName": "all_items"
-    }
   }
 }
