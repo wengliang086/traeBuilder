@@ -1,8 +1,0 @@
-id,name,damage,range,type,required
-int,string,int,float,string,bool
-ID,名称,伤害,射程,类型,是否必填
-101,long_sword,15,1.5,weapon,true
-102,bow,12,5.0,weapon,true
-103,axe,20,1.0,weapon,true
-104,staff,18,3.0,weapon,true
-105,dagger,8,0.5,weapon,true

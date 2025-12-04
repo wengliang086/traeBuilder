@@ -1,8 +1,0 @@
-id,name,type,price,description,required
-int,string,string,int,string,bool
-ID,名称,类型,价格,描述,是否必填
-1,sword,weapon,100,一把普通的剑,true
-2,shield,armor,80,一块坚固的盾牌,true
-3,potion,consumable,20,恢复生命值的药水,true
-4,gold_coin,material,1,金币,false
-5,magic_staff,weapon,200,一根魔法杖,true
