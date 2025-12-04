@@ -1,0 +1,12 @@
+{
+  "sheets": {
+    "items": {
+      "columns": {
+        "name": {
+          "from": "_",
+          "to": "-"
+        }
+      }
+    }
+  }
+}
