@@ -121,6 +121,42 @@ game-data-builder/
 └── README.md               # 项目说明
 ```
 
+## 依赖关系
+
+```mermaid
+graph TD
+    A[cmd]
+    B[conf]
+    C[examples]
+    D[internal]
+    E[test]
+    
+    D1[config]
+    D2[converter]
+    D3[model]
+    D4[reader]
+    D5[validator]
+    
+    A --> D1
+    A --> D2
+    A --> D3
+    A --> D4
+    A --> D5
+    
+    D2 --> D3
+    D4 --> D3
+    D5 --> D3
+    
+    E --> D4
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
+    style E fill:#fbb,stroke:#333,stroke-width:2px
+    style D3 fill:#ff9,stroke:#333,stroke-width:2px
+```
+
 ## 配置说明
 
 ### 主配置文件 (config.json)
